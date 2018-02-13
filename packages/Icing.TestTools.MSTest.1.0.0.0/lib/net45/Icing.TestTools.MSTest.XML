@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Icing.TestTools.MSTest</name>
+    </assembly>
+    <members>
+        <member name="T:Icing.TestTools.MSTest.AssertEx">
+            <summary>Extends the <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Assert"/> class.</summary>
+        </member>
+        <member name="M:Icing.TestTools.MSTest.AssertEx.CreateException(System.String,System.String,System.Object[])">
+            <summary>
+            AssertEx methods call this method, when they fail, to package and throw an AssertFailedException.
+            </summary>
+            <param name="assertionName">Name of the assertion.</param>
+            <param name="message">The message to display.  This message can be seen in the unit test results.</param>
+            <param name="parameters">An array of parameters to use when formatting message.</param>
+        </member>
+        <member name="M:Icing.TestTools.MSTest.AssertEx.CreateExceptionWithExpectedActual(System.String,System.String,System.String,System.String,System.Object[])">
+            <summary>
+            <para>AssertEx methods call this method, when they fail, to package and throw an AssertFailedException.</para>
+            <para>This method packages the expected and actual values and passes them on to CreateException.</para>
+            </summary>
+            <param name="assertionName">Name of the assertion.</param>
+            <param name="expected">The first object to compare.  This is the object the unit test expects.</param>
+            <param name="actual">The second object to compare.  This is the object the unit test produced.</param>
+            <param name="message">The message to display.  This message can be seen in the unit test results.</param>
+            <param name="parameters">An array of parameters to use when formatting message.</param>
+        </member>
+        <member name="M:Icing.TestTools.MSTest.AssertEx.ReplaceNulls(System.Object)">
+            <summary>
+            In a string, replaces nulls with a common string.
+            </summary>
+            <param name="input">The string in which to search for and replace nulls.</param>
+            <returns>The given string with nulls replaced with a common string.</returns>
+        </member>
+        <member name="T:Icing.TestTools.MSTest.ExceptionAssertEx">
+            <summary>
+            <para>Verifies true/false propositions associated with exceptions in unit tests.</para>
+            <para>Extends the <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Assert"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Icing.TestTools.MSTest.ExceptionAssertEx.Throws``1(System.Action,System.String,System.Object[])">
+            <summary>
+            Verifies that the given action throws the specified exception.  The assertion fails if it does not throw the exception.  Optionally displays a message if the assertion fails, and applies the specified formatting to it.
+            </summary>
+            <typeparam name="TException">The type of exception that should be thrown.</typeparam>
+            <param name="action">The action to verify throws the given exception.</param>
+            <param name="message">The message to display if the assertion fails.  This message can be seen in the unit test results.</param>
+            <param name="parameters">An array of parameters to use when formatting message.</param>
+        </member>
+        <member name="T:Icing.TestTools.MSTest.StringAssertEx">
+            <summary>
+            <para>Verifies true/false propositions associated with strings in unit tests.</para>
+            <para>Extends the <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Icing.TestTools.MSTest.StringAssertEx.IsEmpty(System.String,System.String,System.Object[])">
+            <summary>
+            Verifies that the specified string is empty.  The assertion fails if it is not empty.  Optionally displays a message if the assertion fails, and applies the specified formatting to it.
+            </summary>
+            <param name="value">The string to verify is empty.</param>
+            <param name="message">The message to display if the assertion fails.  This message can be seen in the unit test results.</param>
+            <param name="parameters">An array of parameters to use when formatting message.</param>
+        </member>
+        <member name="M:Icing.TestTools.MSTest.StringAssertEx.IsNotEmpty(System.String,System.String,System.Object[])">
+            <summary>
+            Verifies that the specified string is not empty.  The assertion fails if it is empty.  Optionally displays a message if the assertion fails, and applies the specified formatting to it.
+            </summary>
+            <param name="value">The string to verify is not empty.</param>
+            <param name="message">The message to display if the assertion fails.  This message can be seen in the unit test results.</param>
+            <param name="parameters">An array of parameters to use when formatting message.</param>
+        </member>
+        <member name="M:Icing.TestTools.MSTest.StringAssertEx.IsNullOrEmpty(System.String,System.String,System.Object[])">
+            <summary>
+            Verifies that the specified string is null or empty.  The assertion fails if it is not null or empty.  Optionally displays a message if the assertion fails, and applies the specified formatting to it.
+            </summary>
+            <param name="value">The string to verify is null or empty.</param>
+            <param name="message">The message to display if the assertion fails.  This message can be seen in the unit test results.</param>
+            <param name="parameters">An array of parameters to use when formatting message.</param>
+        </member>
+        <member name="M:Icing.TestTools.MSTest.StringAssertEx.IsNotNullOrEmpty(System.String,System.String,System.Object[])">
+            <summary>
+            Verifies that the specified string is not null and not empty.  The assertion fails if it is null or empty.  Optionally displays a message if the assertion fails, and applies the specified formatting to it.
+            </summary>
+            <param name="value">The string to verify is not null and not empty.</param>
+            <param name="message">The message to display if the assertion fails.  This message can be seen in the unit test results.</param>
+            <param name="parameters">An array of parameters to use when formatting message.</param>
+        </member>
+        <member name="M:Icing.TestTools.MSTest.StringAssertEx.IsNullOrWhiteSpace(System.String,System.String,System.Object[])">
+            <summary>
+            Verifies that the specified string is null or white space.  The assertion fails if it is not null or white space.  Optionally displays a message if the assertion fails, and applies the specified formatting to it.
+            </summary>
+            <param name="value">The string to verify is null or white space.</param>
+            <param name="message">The message to display if the assertion fails.  This message can be seen in the unit test results.</param>
+            <param name="parameters">An array of parameters to use when formatting message.</param>
+        </member>
+        <member name="M:Icing.TestTools.MSTest.StringAssertEx.IsNotNullOrWhiteSpace(System.String,System.String,System.Object[])">
+            <summary>
+            Verifies that the specified string is not null and not white space.  The assertion fails if it is null or white space.  Optionally displays a message if the assertion fails, and applies the specified formatting to it.
+            </summary>
+            <param name="value">The string to verify is not null and not white space.</param>
+            <param name="message">The message to display if the assertion fails.  This message can be seen in the unit test results.</param>
+            <param name="parameters">An array of parameters to use when formatting message.</param>
+        </member>
+        <member name="M:Icing.TestTools.MSTest.StringAssertEx.CreateExceptionWithExpectedActual(System.String,System.String[],System.String,System.String,System.Object[])">
+            <summary>
+            <para>StringAssertEx methods call this method, when they fail, to package and throw an AssertFailedException.</para>
+            <para>This method packages the expected and actual values and passes them on to CreateException.</para>
+            </summary>
+            <param name="assertionName">Name of the assertion.</param>
+            <param name="expected">The first objects to compare.  Any one of these is the object the unit test expects.</param>
+            <param name="actual">The second object to compare.  This is the object the unit test produced.</param>
+            <param name="message">The message to display.  This message can be seen in the unit test results.</param>
+            <param name="parameters">An array of parameters to use when formatting message.</param>
+        </member>
+    </members>
+</doc>
